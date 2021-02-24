@@ -20,4 +20,8 @@ export class Game {
             this.nextPlayer = this.player2;
         }
     }
+
+    drawCards() {
+        throw new Error('Method not implemented yet');
+    }
 }
