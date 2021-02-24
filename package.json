@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll",
     "test:concepts": "react-scripts test --roots='./src/1 - Concepts'",
     "test:organization": "react-scripts test --roots='./src/2 - Basics/1 - Test Organization'",
     "test:assertion": "react-scripts test --roots='./src/2 - Basics/2 - Assertions'",
