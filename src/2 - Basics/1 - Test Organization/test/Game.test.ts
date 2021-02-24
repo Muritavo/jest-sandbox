@@ -3,6 +3,10 @@ import { Game } from "../src/Game"
 import { Player } from "../src/Player";
 import * as CoinModule from '../src/Coin';
 
+function f(text: string) {
+  return chalk.green(chalk.bold(text));
+}
+
 /**
  * Here we group the tests of type unit tests
  */
@@ -52,7 +56,7 @@ describe('Unit tests', () => {
      * @tip Here is a Typescript tip, 'as const' will give you a more faithful model
      * So it will know that the second parameter can be only 'heads' or 'tails' instead of a generic string
      */
-  ] as const)( 
+  ] as const)(
     'Check that the correct %s starts when coin flip is %s',
     //Here we receive the nth parameter from the array into the nth 
     //parameter for the test
@@ -89,7 +93,7 @@ describe('Integration tests', () => {
     [player2, 0.8]
   ] as const)('Should set first player correctly', (whoShouldPlayFirst, theRandomValueWhenRunningTheTest) => {
     //Here we use a small styling just to make clear what is parameter for the test
-    test(`${chalk.green(chalk.bold(whoShouldPlayFirst.name))} starts when coin flip random results in ${chalk.green(chalk.bold(theRandomValueWhenRunningTheTest))}`, () => {
+    test(`${f(whoShouldPlayFirst.name)} starts when coin flip random results in ${f(String(theRandomValueWhenRunningTheTest))}`, () => {
       global.Math.random = () => theRandomValueWhenRunningTheTest;
       const game = new Game(player1, player2);
       game.startGame();
