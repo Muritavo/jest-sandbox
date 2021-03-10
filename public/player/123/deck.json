@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Charmander",
+    "hp": 30,
+    "pokemonType": "Fire"
+  },
+  {
+    "name": "Bulbasaur",
+    "hp": 30,
+    "pokemonType": "Grass"
+  },
+  {
+    "name": "Squirtle",
+    "hp": 50,
+    "pokemonType": "Water"
+  }
+]
