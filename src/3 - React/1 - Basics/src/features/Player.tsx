@@ -14,6 +14,7 @@ export default function Player({ player }: { player: PlayerModel }) {
             <tr>
               <td>{player.id}</td>
               <td>{player.name}</td>
+              {player.deck ? <td>Deck</td> : null}
             </tr>
           </tbody>
         </table>
